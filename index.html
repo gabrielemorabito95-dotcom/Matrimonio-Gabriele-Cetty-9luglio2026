@@ -32,13 +32,50 @@
 
     <style>
         .img-lista-nozze {
-            max-width: 300px; /* Larghezza massima su PC */
-            width: 100%;       /* Larghezza automatica su mobile (fino a 300px) */
-            height: auto;      /* Mantiene le proporzioni */
-            margin-top: 20px;  /* Spazio sopra l'immagine */
-            margin-bottom: 20px; /* Spazio sotto l'immagine */
-            border-radius: 8px; /* Angoli leggermente arrotondati (opzionale) */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Leggera ombra (opzionale) */
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .ricevimento-casa-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .img-maiolica {
+            height: 60px;
+            width: auto;
+        }
+
+        .testo-ricevimento {
+            font-size: 19px;
+            color: #828282;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Stile per il trasporto */
+        .transport-info {
+            background: #fdfafb;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #f0f0f0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .ricevimento-casa-container {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 
@@ -75,55 +112,73 @@
                     <p>Siamo lieti di invitarvi al nostro matrimonio</p>
                 </div>
             </div>
+            
             <div class="row">
-                <div class="container">
-                    <div class="row">
-                        <div class="display-t">
-                            <div class="display-tc">
-                                <div class="col-md-10 col-md-offset-1">
-                                    <div class="col-md-6 col-sm-6 text-center">
-                                        <div class="event-wrap animate-box">
-                                            <h3>Cerimonia</h3>
-                                            <div class="">
-                                                <i class="icon-clock"></i>
-                                                <span>15:30</span>
-                                            </div>
-                                            <div class="">
-                                                <i class="icon-map"></i>
-                                                <span>Chiesa di Santa Maria dei Giardini, <br>Santo Stefano Medio (ME)</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 text-center">
-                                        <div class="event-wrap animate-box">
-                                            <h3>Ricevimento</h3>
-                                            <div class="">
-                                                <i class="icon-clock"></i>
-                                                <span>20:00</span>
-                                            </div>
-                                            <div class="">
-                                                <i class="icon-map"></i>
-                                                <span>Castello delle Aci, Acireale (CT)</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="col-md-6 col-sm-6 text-center">
+                        <div class="event-wrap animate-box">
+                            <h3>Cerimonia</h3>
+                            <div class="">
+                                <i class="icon-clock"></i>
+                                <span>15:30</span>
+                            </div>
+                            <div class="">
+                                <i class="icon-map"></i>
+                                <span>Chiesa di Santa Maria dei Giardini, <br>Santo Stefano Medio (ME)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-center">
+                        <div class="event-wrap animate-box">
+                            <h3>Ricevimento</h3>
+                            <div class="">
+                                <i class="icon-clock"></i>
+                                <span>20:00</span>
+                            </div>
+                            <div class="">
+                                <i class="icon-map"></i>
+                                <span>Castello delle Aci, Acireale (CT)</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin-bottom: 40px; margin-top: 50px">
-                        <h2>La vostra presenza è il dono più bello.</h2>
-                        <p>Se volete contribuire alla nostra prima avventura come marito e moglie, abbiamo aperto una lista viaggio presso <strong>"Isabel Viaggi"</strong></p>
-                        
-                        <img src="photo/lista-nozze.jpg" alt="Lista Nozze Isabel Viaggi" class="img-lista-nozze animate-box">
+            </div>
 
-                        <p>Intestatario: "Isabel Viaggi Srl"</p>
-                        <p>Causale: "Regalo per viaggio di nozze di Gabriele e Cetty"</p>
-                        <p>IBAN: IT69O0103084160000001078935</p>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center animate-box">
+                    <div class="transport-info">
+                        <i class="icon-map" style="font-size: 30px; color: #F14E95; margin-bottom: 15px; display: block;"></i>
+                        <h3>Servizio Navetta</h3>
+                        <p>Per rendere i vostri spostamenti più agevoli, abbiamo organizzato un servizio di trasporto dedicato.</p>
+                        <p><strong>Andata:</strong> Due autobus partiranno dalla Stazione di Villa San Giovanni intorno alle <strong>ore 13:00</strong>.</p>
+                        <p><strong>Ritorno:</strong> Per il rientro sono previste due corse con <strong>arrivo</strong> alla Stazione di Villa San Giovanni rispettivamente alle <strong>ore 2:30</strong> e alle <strong>ore 3:50</strong>.</p>
                     </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center animate-box" style="margin-top: 40px;">
+                    <div class="ricevimento-casa-container">
+                        <img src="photo/maiolica.jpg" alt="decoro" class="img-maiolica">
+                        <p class="testo-ricevimento">
+                            <strong>Si riceve in casa della sposa</strong><br>
+                            nei giorni 12 e 13 giugno dalle ore 16:00 alle ore 20:30
+                        </p>
+                        <img src="photo/maiolica.jpg" alt="decoro" class="img-maiolica">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin-bottom: 40px; margin-top: 30px">
+                    <h2>La vostra presenza è il dono più bello.</h2>
+                    <p>Se volete contribuire alla nostra prima avventura come marito e moglie, abbiamo aperto una lista viaggio presso <strong>"Isabel Viaggi"</strong></p>
+                    
+                    <img src="photo/lista-nozze.jpg" alt="Lista Nozze Isabel Viaggi" class="img-lista-nozze animate-box">
+
+                    <p>Intestatario: "Isabel Viaggi Srl"</p>
+                    <p>Causale: "Regalo per viaggio di nozze di Gabriele e Cetty"</p>
+                    <p>IBAN: IT69O0103084160000001078935</p>
                 </div>
             </div>
         </div>
@@ -168,7 +223,6 @@
     <script src="js/main.js"></script>
 
     <script>
-        // Configurazione Countdown per il 9 Luglio 2026 alle 15:30
         simplyCountdown('.simply-countdown-one', {
             year: 2026,
             month: 7,
