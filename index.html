@@ -71,10 +71,97 @@
             border: 1px solid #f0f0f0;
         }
 
+        /* Stile per il riquadro romantico della Galleria Fotografica */
+        .romantic-gallery-box {
+            background: rgba(255, 255, 255, 0.92);
+            border: 2px solid #f14e95;
+            border-radius: 15px;
+            padding: 30px 25px;
+            margin: 25px auto 10px auto;
+            max-width: 550px;
+            box-shadow: 0 10px 30px rgba(241, 78, 149, 0.25);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .romantic-gallery-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(241, 78, 149, 0.35);
+        }
+
+        .romantic-gallery-box .heart-icon {
+            font-size: 34px;
+            color: #f14e95;
+            display: inline-block;
+            margin-bottom: 10px;
+            animation: heartBeat 1.5s infinite;
+        }
+
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.15); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.15); }
+            70% { transform: scale(1); }
+        }
+
+        .romantic-gallery-box h3 {
+            font-family: 'Sacramento', cursive;
+            font-size: 38px;
+            color: #f14e95;
+            margin-bottom: 10px;
+            margin-top: 0;
+            line-height: 1.2;
+        }
+
+        .romantic-gallery-box p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 22px;
+            line-height: 1.5;
+        }
+
+        .btn-romantic-gallery {
+            display: inline-block;
+            background-color: #f14e95;
+            color: #ffffff !important;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none !important;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(241, 78, 149, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-romantic-gallery:hover {
+            background-color: #d13279;
+            color: #ffffff !important;
+            box-shadow: 0 6px 20px rgba(241, 78, 149, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-romantic-gallery i {
+            margin-right: 8px;
+        }
+
         @media screen and (max-width: 768px) {
             .ricevimento-casa-container {
                 flex-direction: column;
                 gap: 10px;
+            }
+            .romantic-gallery-box {
+                padding: 20px 15px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .romantic-gallery-box h3 {
+                font-size: 32px;
+            }
+            .btn-romantic-gallery {
+                padding: 12px 20px;
+                font-size: 14px;
             }
         }
     </style>
@@ -94,8 +181,18 @@
                     <div class="display-t">
                         <div class="display-tc animate-box" data-animate-effect="fadeIn">
                             <h1>Gabriele &amp; Cetty</h1>
-                            <h2>We Are Getting Married</h2>
-                            <div class="simply-countdown simply-countdown-one"></div>
+                            <h2>Finalmente sposi!! Grazie per aver fatto parte di questo giorno speciale. Qui sotto c'è il link per vedere le foto:</h2>
+                            
+                            <!-- Riquadro Romantico Galleria Foto -->
+                            <div class="romantic-gallery-box">
+                                <i class="icon-heart heart-icon"></i>
+                                <h3>Galleria Fotografica</h3>
+                                <p>Rivivi insieme a noi i momenti più belli ed emozionanti del nostro giorno speciale!</p>
+                                <a href="https://web.upyourshoot.com/it/customer/813555/gallery" target="_blank" class="btn-romantic-gallery">
+                                    <i class="icon-camera"></i> Guarda le Foto del Matrimonio
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -220,26 +317,7 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/magnific-popup-options.js"></script>
 
-    <script src="js/simplyCountdown.js"></script>
     <script src="js/main.js"></script>
-
-    <script>
-        simplyCountdown('.simply-countdown-one', {
-            year: 2026,
-            month: 7,
-            day: 9,
-            hours: 15,
-            minutes: 30,
-            seconds: 0,
-            words: {
-                days: 'giorni',
-                hours: 'ore',
-                minutes: 'minuti',
-                seconds: 'secondi'
-            },
-            enableUtc: false
-        });
-    </script>
 
     </body>
 </html>
