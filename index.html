@@ -31,6 +31,13 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
+        /* Adattamento per mostrare interamente l'immagine sposi2 */
+        #fh5co-header {
+            background-size: contain !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+        }
+
         .img-lista-nozze {
             max-width: 300px;
             width: 100%;
@@ -71,9 +78,9 @@
             border: 1px solid #f0f0f0;
         }
 
-        /* Stile per il riquadro romantico della Galleria Fotografica */
+        /* Stile per il riquadro della Galleria Fotografica (Sfondo Trasparente) */
         .romantic-gallery-box {
-            background: rgba(255, 255, 255, 0.92);
+            background: transparent; /* Sfondo reso trasparente */
             border: 2px solid #f14e95;
             border-radius: 15px;
             padding: 30px 25px;
@@ -116,7 +123,7 @@
 
         .romantic-gallery-box p {
             font-size: 16px;
-            color: #555;
+            color: #ffffff; /* Testo bianco per migliore leggibilità su sfondo trasparente */
             margin-bottom: 22px;
             line-height: 1.5;
         }
